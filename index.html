@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteStore Tech</title>
+    <link rel="stylesheet" href="assets.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="mobile-container">
+
+        <!-- ================= HOME VIEW ================= -->
+        <div id="home-view" class="app-view active-view">
+            <header class="header">
+                <button class="deliver-to" id="address-trigger">
+                    <div class="pin-badge"><i data-lucide="map-pin" width="18" height="18"></i></div>
+                    <div class="deliver-text">
+                        <span class="label">DELIVER TO</span>
+                        <div style="display:flex; align-items:center; gap:4px;">
+                            <span class="address" id="current-address">Campus Dorms, Bldg B</span>
+                            <i data-lucide="chevron-down" width="16" height="16"></i>
+                        </div>
+                    </div>
+                </button>
+                <div class="search-bar">
+                    <i data-lucide="search" width="18" height="18" color="#8e8e93"></i>
+                    <input type="text" placeholder="Search gadgets in ByteStore Tech...">
+                </div>
+            </header>
+
+            <main class="main-content">
+                <div class="promo-banner">
+                    <div class="promo-text">
+                        <h2>Gaming Accessories Weekend</h2>
+                        <p>Original accessories guaranteed</p>
+                    </div>
+                    <button class="promo-badge" data-code="ICA-2330">CODE: ICA-2330</button>
+                </div>
+
+                <section>
+                    <h3 class="section-title">Explore Categories</h3>
+                    <div class="categories-grid">
+                        <button class="category-card nav-item" data-target="audio-view">
+                            <div class="category-icon-box"><i data-lucide="headphones" width="22" height="22"></i></div>
+                            <span>Audio</span>
+                        </button>
+                        <button class="category-card nav-item" data-target="power-view">
+                            <div class="category-icon-box"><i data-lucide="plug-zap" width="22" height="22"></i></div>
+                            <span>Power</span>
+                        </button>
+                        <button class="category-card" style="background:none; border:1.5px solid #e5e8ef; width:100%; cursor:pointer;">
+                            <div class="category-icon-box"><i data-lucide="watch" width="22" height="22"></i></div>
+                            <span>Watches</span>
+                        </button>
+                        <button class="category-card nav-item" data-target="gaming-view">
+                            <div class="category-icon-box"><i data-lucide="gamepad-2" width="22" height="22"></i></div>
+                            <span>Gaming</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="section-title">Featured Stores</h3>
+                    <div class="cards-stack">
+                        <div class="store-card">
+                            <div class="store-banner">
+                                <img src="images/techzone-store.jpg" alt="TechZone Hub" class="product-img" onerror="this.style.display='none'">
+                            </div>
+                            <div class="store-details">
+                                <div class="store-title-row">
+                                    <h4>TechZone Hub</h4>
+                                    <span class="rating-badge">★ 4.9</span>
+                                </div>
+                                <p class="store-subtitle">Authorized Gadget Store</p>
+                                <div class="store-footer">
+                                    <span class="store-meta">⏱ 30-45 min • EGP 100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- ================= AUDIO VIEW ================= -->
+        <div id="audio-view" class="app-view">
+            <header class="header">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <button class="close-sheet-btn nav-item" data-target="home-view" style="display:flex; align-items:center; justify-content:center;"><i data-lucide="arrow-left" width="18" height="18"></i></button>
+                    <h2 style="font-size:18px;">Audio Gear</h2>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="cards-stack">
+                    <div class="store-card">
+                        <div class="store-banner">
+                            <img src="images/sony-xm5.jpg" alt="Sony XM5" class="product-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="store-details">
+                            <div class="store-title-row">
+                                <h4>Sony WH-1000XM5</h4>
+                                <span class="rating-badge">★ 4.9</span>
+                            </div>
+                            <p class="store-subtitle">Wireless Noise Cancelling Headphones</p>
+                            <div class="store-footer">
+                                <span class="store-meta">EGP 14,500</span>
+                                <button class="add-to-cart-btn" data-name="Sony WH-1000XM5" data-price="14500">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- ================= POWER VIEW ================= -->
+        <div id="power-view" class="app-view">
+            <header class="header">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <button class="close-sheet-btn nav-item" data-target="home-view" style="display:flex; align-items:center; justify-content:center;"><i data-lucide="arrow-left" width="18" height="18"></i></button>
+                    <h2 style="font-size:18px;">Power & Charging</h2>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="cards-stack">
+                    <div class="store-card">
+                        <div class="store-banner">
+                            <img src="images/anker-powerbank.jpg" alt="Anker Powerbank" class="product-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="store-details">
+                            <div class="store-title-row">
+                                <h4>Anker 737 Power Bank</h4>
+                                <span class="rating-badge">★ 4.9</span>
+                            </div>
+                            <p class="store-subtitle">24,000mAh 140W Portable Charger</p>
+                            <div class="store-footer">
+                                <span class="store-meta">EGP 5,800</span>
+                                <button class="add-to-cart-btn" data-name="Anker 737 Power Bank" data-price="5800">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- ================= GAMING VIEW ================= -->
+        <div id="gaming-view" class="app-view">
+            <header class="header">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <button class="close-sheet-btn nav-item" data-target="home-view" style="display:flex; align-items:center; justify-content:center;"><i data-lucide="arrow-left" width="18" height="18"></i></button>
+                    <h2 style="font-size:18px;">Gaming Gear</h2>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="cards-stack">
+                    <div class="store-card">
+                        <div class="store-banner">
+                            <img src="images/ps5-controller.jpg" alt="PS5 Controller" class="product-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="store-details">
+                            <div class="store-title-row">
+                                <h4>DualSense Controller</h4>
+                                <span class="rating-badge">★ 4.9</span>
+                            </div>
+                            <p class="store-subtitle">PlayStation 5 Official Controller</p>
+                            <div class="store-footer">
+                                <span class="store-meta">EGP 3,900</span>
+                                <button class="add-to-cart-btn" data-name="DualSense Controller" data-price="3900">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- ================= PROFILE VIEW ================= -->
+        <div id="profile-view" class="app-view">
+            <header class="header">
+                <h2 style="font-size:18px;">My Profile</h2>
+            </header>
+            <main class="main-content">
+                <div class="promo-banner" style="background:#2c62db;">
+                    <div>
+                        <h2>Campus Student</h2>
+                        <p>ID: 19002330 • Campus Dorms</p>
+                    </div>
+                </div>
+                <button class="promo-badge" style="width:100%; justify-content:center; color:#2c62db; background:#f1f3f7;" data-code="ICA-2330">Promo Code: ICA-2330</button>
+            </main>
+        </div>
+
+        <!-- ================= BOTTOM NAVIGATION ================= -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-target="home-view">
+                <i data-lucide="home" width="21" height="21"></i>
+                <span class="nav-text">Home</span>
+            </button>
+            <button class="nav-item" data-target="audio-view">
+                <i data-lucide="headphones" width="21" height="21"></i>
+                <span class="nav-text">Audio</span>
+            </button>
+            <button class="nav-item" id="orders-nav-trigger">
+                <span class="cart-badge">0</span>
+                <i data-lucide="shopping-bag" width="21" height="21"></i>
+                <span class="nav-text">Orders</span>
+            </button>
+            <button class="nav-item" data-target="profile-view">
+                <i data-lucide="user" width="21" height="21"></i>
+                <span class="nav-text">Profile</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Address Modal -->
+    <div class="modal-backdrop" id="address-modal">
+        <div class="bottom-sheet">
+            <div class="sheet-header">
+                <h3>Select Delivery Location</h3>
+                <button class="close-sheet-btn" id="close-address-modal"><i data-lucide="x" width="18" height="18"></i></button>
+            </div>
+            <div class="sheet-body">
+                <button class="address-option" data-address="Campus Dorms, Bldg B">
+                    <div><strong>Campus Dorms, Bldg B</strong><span>ID: 19002330</span></div>
+                </button>
+                <button class="address-option" data-address="Campus Dorms, Bldg A">
+                    <div><strong>Campus Dorms, Bldg A</strong><span>North Wing</span></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal-backdrop" id="cart-modal">
+        <div class="bottom-sheet">
+            <div class="sheet-header">
+                <h3>Your Cart</h3>
+                <button class="close-sheet-btn" id="close-cart-modal"><i data-lucide="x" width="18" height="18"></i></button>
+            </div>
+            <div class="sheet-body" id="cart-items-container"></div>
+            <div>
+                <div style="display:flex; justify-content:space-between; font-weight:800; font-size:16px; margin-top:16px;">
+                    <span>Total:</span>
+                    <span id="cart-total-amount">EGP 0</span>
+                </div>
+                <button class="checkout-btn" id="proceed-checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Form Modal -->
+    <div class="modal-backdrop" id="checkout-modal">
+        <div class="bottom-sheet">
+            <div class="sheet-header">
+                <h3>Checkout & Payment</h3>
+                <button class="close-sheet-btn" id="close-checkout-modal"><i data-lucide="x" width="18" height="18"></i></button>
+            </div>
+            <div class="sheet-body">
+                <form id="checkout-form" style="display:flex; flex-direction:column; gap:14px;">
+                    <div>
+                        <label style="font-size:13px; font-weight:700; color:#555; display:block; margin-bottom:6px;">Full Name</label>
+                        <input type="text" id="cust-name" required placeholder="Marwan Ragaie" style="width:100%; padding:11px; border:1.5px solid #e5e8ef; border-radius:10px; font-size:14px; outline:none;">
+                    </div>
+                    <div>
+                        <label style="font-size:13px; font-weight:700; color:#555; display:block; margin-bottom:6px;">Phone Number</label>
+                        <input type="tel" id="cust-phone" required placeholder="010XXXXXXXX" style="width:100%; padding:11px; border:1.5px solid #e5e8ef; border-radius:10px; font-size:14px; outline:none;">
+                    </div>
+                    <div>
+                        <label style="font-size:13px; font-weight:700; color:#555; display:block; margin-bottom:6px;">Payment Method</label>
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                            <label style="border:1.5px solid #2c62db; background:#f4f7fe; padding:12px; border-radius:12px; display:flex; align-items:center; gap:8px; cursor:pointer; font-size:13px; font-weight:700;">
+                                <input type="radio" name="payment" value="Cash" checked> Cash on Delivery
+                            </label>
+                            <label style="border:1.5px solid #e5e8ef; padding:12px; border-radius:12px; display:flex; align-items:center; gap:8px; cursor:pointer; font-size:13px; font-weight:700;">
+                                <input type="radio" name="payment" value="Card"> Credit Card
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="checkout-btn" style="margin-top:6px;">Confirm & Pay</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
